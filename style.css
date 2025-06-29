@@ -1,0 +1,161 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+  line-height: 1.6;
+  padding: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Theme Toggle */
+body.dark {
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+}
+
+body:not(.dark) {
+  background-color: #ffffff;
+  color: #111;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  padding: 1rem;
+  border-bottom: 2px solid #00f0ff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00f0ff;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  color: #00f0ff;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background-color: #1c1c1c;
+  border: 1px solid #00f0ff;
+  border-radius: 8px;
+  list-style: none;
+  padding: 0.5rem;
+  min-width: 180px;
+}
+
+.dropdown-content li {
+  margin: 0.5rem 0;
+}
+
+.dropdown-content a {
+  color: #00f0ff;
+  text-decoration: none;
+  display: block;
+  padding: 0.25rem 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #00f0ff20;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#toggle-theme {
+  background: #00f0ff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#toggle-theme:hover {
+  background-color: #00d4e0;
+}
+
+/* Cards */
+.card {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1);
+}
+
+.card h2, .card h1 {
+  color: #00f0ff;
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.card li {
+  margin-bottom: 0.5rem;
+}
+
+/* Quote */
+.quote {
+  font-style: italic;
+  color: #aaa;
+  margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  margin-top: 4rem;
+}
+
+.footer a {
+  color: #00f0ff;
+  text-decoration: none;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
